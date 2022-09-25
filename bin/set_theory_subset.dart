@@ -8,8 +8,8 @@ void main(List<String> args) {
 // A merupakan subset dari B.
 
 // Contoh himpunan A dan B
-  var A = {1, 2, 3, 4, 5};
-  var B = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+  Set A = {1, 2, 3, 4, 5};
+  Set B = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
 // Menggunakan method isSubsetOf
   print(A.isSubsetOf(B)); // true
