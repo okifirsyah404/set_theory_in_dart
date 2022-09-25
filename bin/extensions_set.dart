@@ -5,8 +5,8 @@ extension SetMethodExtensions<T> on Set<T> {
     // merupakan elemen dari himpunan A atau himpunan B, tetapi bukan elemen dari
     // himpunan A dan himpunan B.
 
-    Set<T> result = this.union(other);
-    result.removeAll(this.intersection(other));
+    Set<T> result = union(other);
+    result.removeAll(intersection(other));
 
     return result;
   }
@@ -18,6 +18,6 @@ extension SetMethodExtensions<T> on Set<T> {
     // (subset) dari himpunan B jika dan hanya jika setiap elemen A merupakan elemen
     // dari B. Dalam hal ini B dikatakan superset dari A dan A merupakan subset dari B.
 
-    return this.every((element) => other.contains(element));
+    return every((element) => other.contains(element));
   }
 }

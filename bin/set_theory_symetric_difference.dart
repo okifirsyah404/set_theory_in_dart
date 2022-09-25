@@ -10,5 +10,5 @@ void main(List<String> args) {
   Set B = {2, 4, 6, 8, 10};
 
   // Menggunakan method sum
-  print(A.symetricDifferenceOf(B)); // {1, 2, 3, 4, 5, 6, 8, 10}
+  print(A.symetricDifferenceOf(B)); // {1, 3, 5, 6, 8, 10}
 }
