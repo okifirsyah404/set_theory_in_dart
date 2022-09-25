@@ -1,26 +1,12 @@
 extension SetSymetricDIfference<T> on Set<T> {
   Set<T> symetricDifferenceOf(Set<T> other) {
-    Set<T> mainSet = this;
-    Set<T> subSet = other;
-    Set<T> result = {};
+    // Function untuk menghitung selisih simetris dari dua himpunan
+    // Selisih simetris dari himpunan A dan B adalah himpunan yang setiap elemennya
+    // merupakan elemen dari himpunan A atau himpunan B, tetapi bukan elemen dari
+    // himpunan A dan himpunan B.
 
-    mainSet.forEach((element) {
-      for (var element2 in other) {
-        if (element != element2) {
-          result.add(element);
-        }
-      }
-    });
-
-    subSet.forEach((element) {
-      for (var element2 in this) {
-        if (element != element2) {
-          result.add(element);
-        }
-      }
-    });
-
-    result.removeAll(mainSet.intersection(other));
+    Set<T> result = this.union(other);
+    result.removeAll(this.intersection(other));
 
     return result;
   }
@@ -28,6 +14,12 @@ extension SetSymetricDIfference<T> on Set<T> {
 
 extension IsSubsetOf<T> on Set<T> {
   bool isSubsetOf(Set<T> other) {
+    // Function untuk mengecek apakah himpunan ini merupakan himpunan bagian dari
+    // himpunan lain. Anggota yang dikandung di dalam himpunan tersebut juga
+    // terkandung di dalam himpunan yang lain. Himpunan A dikatakan himpunan bagian
+    // (subset) dari himpunan B jika dan hanya jika setiap elemen A merupakan elemen
+    // dari B. Dalam hal ini B dikatakan superset dari A dan A merupakan subset dari B.
+
     return this.every((element) => other.contains(element));
   }
 }
