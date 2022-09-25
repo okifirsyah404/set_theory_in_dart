@@ -1,4 +1,4 @@
-extension SetSymetricDIfference<T> on Set<T> {
+extension SetMethodExtensions<T> on Set<T> {
   Set<T> symetricDifferenceOf(Set<T> other) {
     // Function untuk menghitung selisih simetris dari dua himpunan
     // Selisih simetris dari himpunan A dan B adalah himpunan yang setiap elemennya
@@ -10,9 +10,7 @@ extension SetSymetricDIfference<T> on Set<T> {
 
     return result;
   }
-}
 
-extension IsSubsetOf<T> on Set<T> {
   bool isSubsetOf(Set<T> other) {
     // Function untuk mengecek apakah himpunan ini merupakan himpunan bagian dari
     // himpunan lain. Anggota yang dikandung di dalam himpunan tersebut juga
